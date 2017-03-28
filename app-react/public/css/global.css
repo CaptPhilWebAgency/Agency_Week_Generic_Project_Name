@@ -1,0 +1,23 @@
+/*font*/
+/*font-family: 'Raleway', sans-serif;*/
+
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+header {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    height: 200px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav  {
+    background: none !important;
+}
