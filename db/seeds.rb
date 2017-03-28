@@ -27,7 +27,7 @@ csv.each do |row|
 
   #Write to the Product Table
   p = Product.new
-  p.product = row["Product"]
+  p.name = row["Product"]
   p.sku = row["SKU"]
   p.price = row["Price"]
   p.available = row["Available"]

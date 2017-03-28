@@ -41,6 +41,11 @@ gem 'sendgrid-ruby'
 gem 'carrierwave'
 gem 'cloudinary'
 
+gem 'rails_admin', '~> 1.1.1'
+gem 'pg_search'
+gem 'ransack'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
