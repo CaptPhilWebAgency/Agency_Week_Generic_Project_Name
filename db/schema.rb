@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328035819) do
+ActiveRecord::Schema.define(version: 20170328153413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,12 +27,6 @@ ActiveRecord::Schema.define(version: 20170328035819) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "category_tests", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -60,18 +54,6 @@ ActiveRecord::Schema.define(version: 20170328035819) do
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
-  create_table "product_tests", force: :cascade do |t|
-    t.string   "product"
-    t.string   "sku"
-    t.integer  "price"
-    t.integer  "available"
-    t.integer  "year"
-    t.string   "description"
-    t.string   "category"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.string   "sku"
     t.decimal  "price",       precision: 9, scale: 2
@@ -95,14 +77,9 @@ ActiveRecord::Schema.define(version: 20170328035819) do
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
-  create_table "year_tests", force: :cascade do |t|
-    t.integer  "yr"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "admin",           default: false
   end
 
   create_table "years", force: :cascade do |t|
