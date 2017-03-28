@@ -40,6 +40,7 @@ gem 'faker'
 gem 'sendgrid-ruby'
 gem 'carrierwave'
 gem 'cloudinary'
+gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'rails_admin', '~> 1.1.1'
 gem 'pg_search'
