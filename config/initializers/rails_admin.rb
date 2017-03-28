@@ -1,5 +1,11 @@
 RailsAdmin.config do |config|
 
+  # config.authorize_with do
+  #   authenticate_or_request_with_http_basic('Site Message') do |username, password|
+  #      User.find_by(username: username).try(:authenticate, password).try(:admin?)
+  #    end
+  #  end
+
   ### Popular gems integration
 
   ## == Devise ==
@@ -22,6 +28,21 @@ RailsAdmin.config do |config|
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar true
+
+  config.excluded_models << "Ordering"
+
+  config.model 'User' do
+    object_label_method :username
+    list do
+      exclude_fields :password_digest, :api_token
+    end
+    edit do
+      exclude_fields :password_digest, :api_token
+    end
+    show do
+      exclude_fields :password_digest, :api_token
+    end
+  end
 
   config.actions do
     dashboard                     # mandatory
