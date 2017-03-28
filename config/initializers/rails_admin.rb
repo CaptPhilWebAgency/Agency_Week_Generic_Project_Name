@@ -30,9 +30,13 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.excluded_models << "Ordering"
+  config.excluded_models << "Category"
+  config.excluded_models << "Year"
+  config.excluded_models << "Status"
+  config.excluded_models << "Address"
 
   config.model 'User' do
-    object_label_method :username
+    object_label_method :email
     list do
       exclude_fields :password_digest, :api_token
     end
@@ -43,6 +47,16 @@ RailsAdmin.config do |config|
       exclude_fields :password_digest, :api_token
     end
   end
+
+  config.model 'Year' do
+    object_label_method :yr
+  end
+
+  config.model 'Address' do
+    object_label_method :street
+  end
+
+
 
   config.actions do
     dashboard                     # mandatory
