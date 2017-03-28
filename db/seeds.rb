@@ -15,24 +15,26 @@ csv.each do |row|
       row[key] = value.gsub(/[S|M]:/i, "")
     end
   end
-
-  #Write to the Product Table
-  p = ProductTest.new
-  p.product = row["Product"]
-  p.sku = row["SKU"]
-  p.price = row["Price"]
-  p.available = row["Available"]
-  p.description = row["Description"]
-  p.save!
-
   #Write to the Category Table
-  c = CategoryTest.find_or_create_by!(name: row["Category"])
+  c = Category.find_or_create_by!(name: row["Category"])
   c.name = row["Category"]
   c.save!
 
   #Write to the Year Table
-  y = YearTest.find_or_create_by!(yr: row["Year"])
+  y = Year.find_or_create_by!(yr: row["Year"])
   y.yr = row["Year"]
   y.save!
+
+  #Write to the Product Table
+  p = Product.new
+  p.product = row["Product"]
+  p.sku = row["SKU"]
+  p.price = row["Price"]
+  p.available = row["Available"]
+  p.year_id = Year.find_by(yr: row["Year"]).id
+  p.category_id = Category.find_by(name: row["Category"]).id
+  p.description = row["Description"]
+  p.save!
+
 
 end
