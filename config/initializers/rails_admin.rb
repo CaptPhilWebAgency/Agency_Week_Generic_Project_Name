@@ -30,10 +30,10 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.excluded_models << "Ordering"
-  config.excluded_models << "Category"
-  config.excluded_models << "Year"
-  config.excluded_models << "Status"
-  config.excluded_models << "Address"
+  # config.excluded_models << "Category"
+  # config.excluded_models << "Year"
+  # config.excluded_models << "Status"
+  # config.excluded_models << "Address"
 
   config.model 'User' do
     object_label_method :email
