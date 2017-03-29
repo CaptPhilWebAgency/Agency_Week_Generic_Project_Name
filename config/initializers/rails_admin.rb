@@ -1,5 +1,7 @@
 RailsAdmin.config do |config|
 
+  config.total_columns_width = 1000
+
   # config.authorize_with do
   #   authenticate_or_request_with_http_basic('Site Message') do |username, password|
   #      User.find_by(username: username).try(:authenticate, password).try(:admin?)
