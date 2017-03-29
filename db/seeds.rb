@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
-load_csv = false
+load_csv = true
 
 if load_csv
   csv_text = File.read(Rails.root.join('lib', 'seeds',"Iron_Glory_Inventory.csv"))
@@ -37,6 +37,7 @@ if load_csv
     p.year_id = Year.find_by(yr: row["Year"]).id
     p.category_id = Category.find_by(name: row["Category"]).id
     p.description = row["Description"]
+    p.image = Rails.root.join('lib', 'seeds', 'inventory',"#{p.sku.downcase}.png").open
     p.save!
 
 
@@ -65,9 +66,8 @@ end
 
 
 
-
 #run the methods here.
 # this runs new_users if there are less than 10 users in the database.
-userslist = User.all.length < 5 ? new_users : User.all
+# userslist = User.all.length < 5 ? new_users : User.all
 
 puts "\nDone."
