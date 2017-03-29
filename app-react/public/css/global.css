@@ -1,6 +1,3 @@
-/*font*/
-/*font-family: 'Raleway', sans-serif;*/
-
 * {
     box-sizing: border-box;
 }
@@ -8,16 +5,91 @@ img {
     width: 100%;
 }
 
+root {
+font-family: 'Raleway', sans-serif;
+}
+
 header {
     background-image: url("../img/background.jpg");
     background-size: cover;
-    height: 200px;
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 200px;
 }
 
-.nav  {
+nav  {
     background: none !important;
+}
+
+/*QQGABE: what were the font types you used? I know Raleway, but I lost the page, so don't know which weights you specified */
+.sectionHeaders {
+    padding-top: 100px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #FD41A0;
+}
+
+.sectionHeaders {
+    overflow: hidden;
+    text-align: center;
+}
+.sectionHeaders:before,
+.sectionHeaders:after {
+    background-color: #8D8C88;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%;
+}
+.sectionHeaders:before {
+    right: 1.5em;
+    /*margin-left: -50%;*/
+}
+.sectionHeaders:after {
+    left: 1.5em;
+    /*margin-right: -50%;*/
+}
+
+.featureCard {
+    margin-top: 50px; 
+    padding-bottom: 50px; 
+    /*margin-bottom: 50px; */
+}
+
+.featureImgCol {
+    border: 1px solid #BEBEBE;
+    background-color: white;
+}
+
+.featureContent {
+    border: 1px solid #BEBEBE;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.featureTitle {
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 30px; 
+}
+
+.featureDescription {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 25px; 
+}
+
+.featurePrice {
+        font-family: 'Raleway', sans-serif; 
+        text-align: center;
+        font-size: 15px; 
+}
+
+.dollarSign {
+    font-size: 20px; 
 }

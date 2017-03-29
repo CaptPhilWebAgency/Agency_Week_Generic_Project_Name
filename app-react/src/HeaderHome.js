@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Feature from './Feature';
 
 class HeaderHome extends Component {
   render() {
@@ -6,8 +7,8 @@ class HeaderHome extends Component {
       <header>
           <nav className="nav">
             <div className="nav-left">
-              <a className="nav-item">
-                <img className="logo" src="./img/iron-glory-logo.png" alt="Iron Glory logo"/>
+              <a className="nav-item logo">
+                <img src="./img/ironglorylogo.png" alt="Iron Glory logo"/>
               </a>
             </div>
 
@@ -37,6 +38,10 @@ class HeaderHome extends Component {
               </a>
             </div>
           </nav>
+          
+          <div className="headerFeature">
+            <Feature />
+          </div>
       </header>
     );
   }
