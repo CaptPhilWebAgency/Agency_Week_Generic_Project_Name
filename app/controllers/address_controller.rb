@@ -16,7 +16,7 @@ class AddressController < ApplicationController
     if @address.save
       render json: @address
     else
-      request_error(@address.errors.fufull_messages)
+      request_error(@address.errors.full_messages)
     end
   end
 
