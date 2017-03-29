@@ -9,4 +9,16 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     render json: @product
   end
+
+  def create
+    @product = Product.new(product_params)
+    if @product.save
+      render json: @product
+    else
+      request_error(@product.errors.full_messages)
+    end
+  end
+
+  
+
 end
