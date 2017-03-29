@@ -5,48 +5,54 @@ img {
     width: 100%;
 }
 
-/*#root {
-font-family: 'Raleway', sans-serif;
-}*/
+body {
+    font-family: 'Raleway', sans-serif;
+}
 
 /*start header with nav*/
 header {
     background-image: url("../img/background.jpg");
     background-size: cover;
+    background-position: 0% 100%;
 }
 
-.logo {
-    max-width: 200px;
+/*CHECK FILE SIZE . . . SOMETHING'S WEIRD. IT'S COMING IN ALL SQUISHY.*/
+.logoImage {
+    /*max-width: 400px; */
+    width: 31vw; 
+    min-width: 200px;
+    height: initial;
+    max-height: none !important;
+    padding-left: 40px; 
 }
 
 nav  {
     background: none !important;
+    padding-top: 30px; 
 }
 
-.nav-menu {
-    max-width: 50px; 
+a.nav-item {
+     color: #545454;
+     font-size: 15px; 
+     margin-right: 60px; 
 }
 
 .searchIcon {
-    max-width: 15px; 
     margin-left: 5px; 
     color: #424242;
 }
 
 .cartIcon {
-    max-width: 30px;
     color: #424242;
-
+    font-size: 30px; 
 }
 
 /*sectionHeaders -- pink titles with HR on either side*/
-/*QQGABE: what were the font types you used? I know Raleway, but I lost the page, so don't know which weights you specified */
 .sectionHeaders {
     padding-top: 100px;
     text-transform: uppercase;
     font-size: 30px;
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     color: #FD41A0;
 }
 
@@ -56,10 +62,10 @@ nav  {
 }
 .sectionHeaders:before,
 .sectionHeaders:after {
-    background-color: #8D8C88;
+    background-color: #797979;
     content: "";
     display: inline-block;
-    height: 1px;
+    height: 2px;
     position: relative;
     vertical-align: middle;
     width: 10%;
@@ -76,9 +82,8 @@ nav  {
 
 /*start feature card*/
 .featureCard {
-    margin-top: 50px; 
+    margin-top: 100px; 
     padding-bottom: 50px; 
-    /*margin-bottom: 50px; */
 }
 
 .featureImgCol {
@@ -89,27 +94,40 @@ nav  {
 .featureContent {
     border: 1px solid #BEBEBE;
     background-color: rgba(255,255,255,0.5);
+    padding-top: 20px; 
+    padding-right: 40px; 
+    padding-left: 40px; 
+    padding-bottom: 40px; 
+    color: #545454;
 }
 
 .featureTitle {
     padding-top: 20px;
     padding-bottom: 20px; 
-    font-family: 'Raleway', sans-serif;
     text-align: center;
-    font-size: 30px; 
+    font-size: 30px;
 }
 
 .featureDescription {
-    font-family: 'Raleway', sans-serif; 
-    font-size: 25px; 
+    font-size: 22px; 
 }
 
 .featurePrice {
-        font-family: 'Raleway', sans-serif; 
         text-align: center;
-        font-size: 15px; 
+        font-size: 28px; 
+        padding-top: 30px;
+        /*font-weight: bold;*/
 }
 
-.dollarSign {
-    font-size: 20px; 
+/*start categories section*/
+.categories {
+    text-align: center;
 }
+
+.catLink:hover {
+    text-decoration: none;
+}
+
+/*.categoryImage {
+
+}*/
