@@ -1,8 +1,8 @@
 // homepage
 
-getUsers();
+getProducts();
 
-function getUsers() {
+function getProducts() {
         fetch('/api/products')
             .then(response => response.json())
             .then(data => {
