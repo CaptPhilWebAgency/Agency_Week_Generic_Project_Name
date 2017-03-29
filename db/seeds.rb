@@ -40,9 +40,30 @@ if load_csv
     p.image = Rails.root.join('lib', 'seeds', 'inventory',"#{p.sku.downcase}.png").open
     p.save!
 
-
   end
+
+  music = Category.find_by(name: "Music")
+  music.image = Rails.root.join('lib', 'seeds', 'category images',"music.png").open
+
+  farm = Category.find_by(name: "Farming")
+  farm.image = Rails.root.join('lib', 'seeds', 'category images',"farming.png").open
+
+  park = Category.find_by(name: "National Parks")
+  park.image = Rails.root.join('lib', 'seeds', 'category images',"parks.png").open
+
+  movie = Category.find_by(name: "Movies")
+  movie.image  = Rails.root.join('lib', 'seeds', 'category images',"movies.png").open
+
+  music.save!
+  farm.save!
+  park.save!
+  movie.save!
+
 end
+
+
+
+
 
 
 # This method adds 10 new users
