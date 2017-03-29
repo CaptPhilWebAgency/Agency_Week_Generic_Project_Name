@@ -5,7 +5,7 @@ import { browserHistory } from 'react-router'
 class App extends Component {
   constructor(props) {
     super(props)
-    this.getProducts = this.getProducts.bind(this)
+    // this.getProducts = this.getProducts.bind(this)
 
     this.state = {
       originalProducts: [],
