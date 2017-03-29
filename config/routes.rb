@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :orders
     resources :products
     resources :users
+    resources :categories
 
     post 'login' => 'users#login'
   end
