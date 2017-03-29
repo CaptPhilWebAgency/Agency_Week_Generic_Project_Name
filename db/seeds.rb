@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
-load_csv = false
+load_csv = true
 
 if load_csv
   csv_text = File.read(Rails.root.join('lib', 'seeds',"Iron_Glory_Inventory.csv"))
@@ -37,11 +37,33 @@ if load_csv
     p.year_id = Year.find_by(yr: row["Year"]).id
     p.category_id = Category.find_by(name: row["Category"]).id
     p.description = row["Description"]
+    p.image = Rails.root.join('lib', 'seeds', 'inventory',"#{p.sku.downcase}.png").open
     p.save!
 
-
   end
+
+  music = Category.find_by(name: "Music")
+  music.image = Rails.root.join('lib', 'seeds', 'category images',"music.png").open
+
+  farm = Category.find_by(name: "Farming")
+  farm.image = Rails.root.join('lib', 'seeds', 'category images',"farming.png").open
+
+  park = Category.find_by(name: "National Parks")
+  park.image = Rails.root.join('lib', 'seeds', 'category images',"parks.png").open
+
+  movie = Category.find_by(name: "Movies")
+  movie.image  = Rails.root.join('lib', 'seeds', 'category images',"movies.png").open
+
+  music.save!
+  farm.save!
+  park.save!
+  movie.save!
+
 end
+
+
+
+
 
 
 # This method adds 10 new users
@@ -65,9 +87,8 @@ end
 
 
 
-
 #run the methods here.
 # this runs new_users if there are less than 10 users in the database.
-userslist = User.all.length < 5 ? new_users : User.all
+# userslist = User.all.length < 5 ? new_users : User.all
 
 puts "\nDone."
