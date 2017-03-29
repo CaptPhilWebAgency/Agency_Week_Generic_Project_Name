@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class Footer extends Component {
+class ProductSelected extends Component {
   render() {
     return (
     );
   }
 }
 
-export default Footer;
+export default ProductSelected;
