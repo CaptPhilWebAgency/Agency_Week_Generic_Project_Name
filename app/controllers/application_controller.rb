@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery unless: -> { request.format.json? }
 
   private
 
@@ -15,5 +15,5 @@ class ApplicationController < ActionController::Base
   def require_user
       request_error("You need to be logged in.", 401) unless current_user
   end
-  
+
 end

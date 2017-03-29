@@ -20,12 +20,12 @@ class UsersController < ApplicationController
   end
 
   def login
-    @user = User.find_by(username: params[:username])&.
+    @user = User.find_by(email: params[:email])&.
               authenticate(params[:password])
     if @user
       render json: @user, serializer: UserExtendedSerializer
     else
-      request_error("Invalid username or password", 401)
+      request_error("Invalid email or password", 401)
     end
   end
 
