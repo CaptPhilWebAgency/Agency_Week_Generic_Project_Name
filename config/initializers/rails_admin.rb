@@ -1,5 +1,7 @@
 RailsAdmin.config do |config|
 
+  config.total_columns_width = 1000
+
   # config.authorize_with do
   #   authenticate_or_request_with_http_basic('Site Message') do |username, password|
   #      User.find_by(username: username).try(:authenticate, password).try(:admin?)
@@ -30,33 +32,37 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.excluded_models << "Ordering"
-  # config.excluded_models << "Category"
-  # config.excluded_models << "Year"
-  # config.excluded_models << "Status"
-  # config.excluded_models << "Address"
 
   config.model 'User' do
     object_label_method :email
     list do
-      exclude_fields :password_digest, :api_token
+      exclude_fields :password_digest, :token
     end
     edit do
-      exclude_fields :password_digest, :api_token
+      exclude_fields :password_digest, :token
     end
     show do
-      exclude_fields :password_digest, :api_token
+      exclude_fields :password_digest, :token
     end
   end
 
   config.model 'Year' do
     object_label_method :yr
+    visible false
   end
 
   config.model 'Address' do
+    visible false
     object_label_method :street
   end
 
+  config.model 'Category' do
+    visible false
+  end
 
+  config.model 'Status' do
+    visible false
+  end
 
   config.actions do
     dashboard                     # mandatory
