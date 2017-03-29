@@ -30,10 +30,6 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.excluded_models << "Ordering"
-  # config.excluded_models << "Category"
-  # config.excluded_models << "Year"
-  # config.excluded_models << "Status"
-  # config.excluded_models << "Address"
 
   config.model 'User' do
     object_label_method :email
@@ -50,13 +46,21 @@ RailsAdmin.config do |config|
 
   config.model 'Year' do
     object_label_method :yr
+    visible false
   end
 
   config.model 'Address' do
+    visible false
     object_label_method :street
   end
 
+  config.model 'Category' do
+    visible false
+  end
 
+  config.model 'Status' do
+    visible false
+  end
 
   config.actions do
     dashboard                     # mandatory
