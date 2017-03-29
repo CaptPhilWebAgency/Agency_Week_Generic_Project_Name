@@ -25,7 +25,7 @@ class HeaderHome extends Component {
             {/*<!-- Add the modifier "is-active" to display it on mobile -->*/}
             <div className="nav-right nav-menu">
               <a className="nav-item">
-                search <img src="./img/search.png" alt="icon of a magnifying glass"/>
+                search <img className="searchIcon" src="./img/search.png" alt="icon of a magnifying glass"/>
               </a>
               <a className="nav-item">
                 products
@@ -34,7 +34,7 @@ class HeaderHome extends Component {
                 login
               </a>
               <a className="nav-item">
-                <img src="./img/cart.png" alt="icon of a shopping cart"/>
+                <img className="cartIcon" src="./img/cart.png" alt="icon of a shopping cart"/>
               </a>
             </div>
           </nav>

@@ -5,10 +5,11 @@ img {
     width: 100%;
 }
 
-root {
+/*#root {
 font-family: 'Raleway', sans-serif;
-}
+}*/
 
+/*start header with nav*/
 header {
     background-image: url("../img/background.jpg");
     background-size: cover;
@@ -22,6 +23,23 @@ nav  {
     background: none !important;
 }
 
+.nav-menu {
+    max-width: 50px; 
+}
+
+.searchIcon {
+    max-width: 15px; 
+    margin-left: 5px; 
+    color: #424242;
+}
+
+.cartIcon {
+    max-width: 30px;
+    color: #424242;
+
+}
+
+/*sectionHeaders -- pink titles with HR on either side*/
 /*QQGABE: what were the font types you used? I know Raleway, but I lost the page, so don't know which weights you specified */
 .sectionHeaders {
     padding-top: 100px;
@@ -54,7 +72,9 @@ nav  {
     left: 1.5em;
     /*margin-right: -50%;*/
 }
+/*end sectionHeaders*/
 
+/*start feature card*/
 .featureCard {
     margin-top: 50px; 
     padding-bottom: 50px; 
