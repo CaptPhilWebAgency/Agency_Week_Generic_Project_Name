@@ -34,13 +34,13 @@ RailsAdmin.config do |config|
   config.model 'User' do
     object_label_method :email
     list do
-      exclude_fields :password_digest, :api_token
+      exclude_fields :password_digest, :token
     end
     edit do
-      exclude_fields :password_digest, :api_token
+      exclude_fields :password_digest, :token
     end
     show do
-      exclude_fields :password_digest, :api_token
+      exclude_fields :password_digest, :token
     end
   end
 
