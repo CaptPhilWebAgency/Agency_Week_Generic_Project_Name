@@ -9,14 +9,22 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+
 /*start header with nav*/
-header {
+.headerHome {
     background-image: url("../img/background.jpg");
     background-size: cover;
     background-position: 0% 100%;
 }
 
-/*CHECK FILE SIZE . . . SOMETHING'S WEIRD. IT'S COMING IN ALL SQUISHY.*/
+.headerSub {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: 0% 0%;
+    /*background-position: 0% 40%;*/
+    /*QQGABE: I like position at 40%, too. . . it's in the sunnier part of the sky. But I see the value of the more consistent blue-gray, also. */
+}
+
 .logoImage {
     /*max-width: 400px; */
     width: 31vw; 
@@ -32,26 +40,31 @@ nav  {
 }
 
 a.nav-item {
-     color: #545454;
-     font-size: 15px; 
-     margin-right: 60px; 
+    color: #545454;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px; 
+    margin-right: 60px; 
 }
 
 .searchIcon {
     margin-left: 5px; 
     color: #424242;
+    font-family: 'Raleway', sans-serif;
 }
 
 .cartIcon {
     color: #424242;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px; 
 }
+
 
 /*sectionHeaders -- pink titles with HR on either side*/
 .sectionHeaders {
     padding-top: 100px;
     text-transform: uppercase;
     font-size: 30px;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: #FD41A0;
 }
@@ -72,13 +85,12 @@ a.nav-item {
 }
 .sectionHeaders:before {
     right: 1.5em;
-    /*margin-left: -50%;*/
 }
 .sectionHeaders:after {
     left: 1.5em;
-    /*margin-right: -50%;*/
 }
 /*end sectionHeaders*/
+
 
 /*start feature card*/
 .featureCard {
@@ -99,6 +111,7 @@ a.nav-item {
     padding-left: 40px; 
     padding-bottom: 40px; 
     color: #545454;
+    font-family: 'Raleway', sans-serif;
 }
 
 .featureTitle {
@@ -106,21 +119,24 @@ a.nav-item {
     padding-bottom: 20px; 
     text-align: center;
     font-size: 30px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .featureDescription {
-    font-size: 22px; 
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .featurePrice {
         text-align: center;
         font-size: 28px; 
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
         padding-top: 30px;
-        /*font-weight: bold;*/
 }
 
-/*start categories section*/
 
+/*start categories section*/
 .categorySection {
     padding-top: 70px;
     padding-bottom: 100px;
@@ -128,10 +144,12 @@ a.nav-item {
 
 .categories {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 .catLink:hover {
     text-decoration: none;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*Start footer*/
@@ -145,10 +163,48 @@ footer {
 
 footer a {
     color: #FD41A0;
+    font-family: 'Raleway', sans-serif;
     /*font-size: 50px;*/
 }
 
 footer a:hover {
     color: #FD41A0;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
+}
+
+.footer {
+    background-color: white;
+}
+
+/*start product Build*/
+.productImgBuild {
+    border: 1px solid #BEBEBE;
+    background-color: white;
+}
+
+.productTitleBuild {
+    font-family: 'Raleway', sans-serif;
+    color: #545454;
+    font-size: 20px;
+}
+
+.productPriceBuild {
+    font-family: 'Raleway', sans-serif;
+    color: #545454;
+    font-size: 15px; 
+}
+
+
+/*start products*/
+input {
+    font-family: 'Raleway', sans-serif;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+}
+
+.categoryTitlesProductsPage {
+    font-family: 'Raleway', sans-serif;
 }

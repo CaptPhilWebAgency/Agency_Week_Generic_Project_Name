@@ -4,7 +4,7 @@ import Feature from './Feature';
 class HeaderHome extends Component {
   render() {
     return (
-      <header>
+      <header className="headerHome">
           <nav className="nav">
             <div className="nav-left">
               <a className="nav-item logo">
