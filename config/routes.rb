@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  root 'application#static'
+
   scope :api do
     resources :orders
     resources :products
