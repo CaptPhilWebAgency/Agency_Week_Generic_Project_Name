@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  #TODO Figure out how to set root URL based on front-end
-  #Figure we want to take the user directly to the products landing page whether signed in or not.
-  #root 'products#index'
+  root 'application#static'
 
   scope :api do
     resources :orders
