@@ -1,6 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #SendGrid Production Host URL
+  #TODO Remember to change URL to match heroku before going live
+  config.action_mailer.default_url_options = {:host => "ironglory.herokuapp.com"}
+
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
