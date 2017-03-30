@@ -1,4 +1,4 @@
-class UsersMailer < ApplicationMailer
+class OrdersMailer < ApplicationMailer
   def create(order)
     @user = user
     @order = order
