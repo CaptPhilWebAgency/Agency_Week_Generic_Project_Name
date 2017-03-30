@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
-load_csv = true
+load_csv = false
 
 if load_csv
   csv_text = File.read(Rails.root.join('lib', 'seeds',"Iron_Glory_Inventory.csv"))
@@ -60,11 +60,9 @@ if load_csv
   movie.save!
 
 end
-
-
-
-
-
+prod = Product.find(rand(1..Product.all.length))
+prod.featured = true
+prod.save!
 
 # This method adds 10 new users
 def new_users
