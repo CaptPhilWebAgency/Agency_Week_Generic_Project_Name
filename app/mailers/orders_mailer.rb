@@ -1,7 +1,7 @@
-class UsersMailer < ApplicationMailer
-  def create(order)
-    @user = user
+class OrdersMailer < ApplicationMailer
+  def create(email, order)
+    @email = email
     @order = order
-    mail(to: @user.email, subject: "Iron Glory order: #{order.id}")
+    mail(to: @email, subject: "Iron Glory order: #{order.id}")
   end
 end
