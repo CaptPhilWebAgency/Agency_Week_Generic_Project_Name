@@ -2,7 +2,7 @@ class AddressController < ApplicationController
 
   def index
     @address = Address.all
-    render json: @order
+    render json: @address
   end
 
   def show

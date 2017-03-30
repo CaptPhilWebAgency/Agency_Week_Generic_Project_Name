@@ -2,11 +2,11 @@ RailsAdmin.config do |config|
 
   config.total_columns_width = 1000
 
-  # config.authorize_with do
-  #   authenticate_or_request_with_http_basic('Site Message') do |username, password|
-  #      User.find_by(username: username).try(:authenticate, password).try(:admin?)
-  #    end
-  #  end
+   config.authorize_with do
+    authenticate_or_request_with_http_basic('Site Message') do |email, password|
+       User.find_by(email: email).try(:authenticate, password).try(:admin?)
+     end
+   end
 
   ### Popular gems integration
 
@@ -63,6 +63,11 @@ RailsAdmin.config do |config|
   config.model 'Status' do
     visible false
   end
+
+  #Add a sign-out link to the admin panel
+  config.navigation_static_links = {
+  'Return Home' => '/'
+}
 
   config.actions do
     dashboard                     # mandatory
