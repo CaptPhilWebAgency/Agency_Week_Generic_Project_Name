@@ -14,16 +14,13 @@ import Success from './components/Success';
 
 ReactDOM.render(
 <Router history={browserHistory}>
-    <Route path="/" component={Home}>
-        <IndexRoute component={Home}/>
-        <Route path="/sign" component={Sign} />
-        <Route path="/productbuild" component={ProductBuild} />
-        <Route path="/products" component={Products} />
-        <Route path="/productselected" component={ProductSelected} />
-        <Route path="/cart" component={Cart} />
-        <Route path="/success" component={Success} />
-    </Route>
-  </Router>,
+    <Route path="/" component={Home}/>
+    <Route path="/sign" component={Sign} />
+    <Route path="/productbuild" component={ProductBuild} />
+    <Route path="/products" component={Products} />
+    <Route path="/productselected" component={ProductSelected} />
+    <Route path="/cart" component={Cart} />
+</Router>,
 
   document.getElementById('root')
 );

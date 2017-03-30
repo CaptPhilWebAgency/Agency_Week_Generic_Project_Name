@@ -49,12 +49,10 @@ a.nav-item {
 .searchIcon {
     margin-left: 5px; 
     color: #424242;
-    font-family: 'Raleway', sans-serif;
 }
 
 .cartIcon {
     color: #424242;
-    font-family: 'Raleway', sans-serif;
     font-size: 30px; 
 }
 
@@ -93,6 +91,16 @@ a.nav-item {
 
 
 /*start feature card*/
+.is-one-third-mobile-centered {
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .is-one-third-mobile-centered {
+        margin: 0;
+    }
+}
+
 .featureCard {
     margin-top: 100px; 
     padding-bottom: 50px; 
@@ -105,7 +113,7 @@ a.nav-item {
 
 .featureContent {
     border: 1px solid #BEBEBE;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.8);
     padding-top: 20px; 
     padding-right: 40px; 
     padding-left: 40px; 
@@ -140,6 +148,10 @@ a.nav-item {
 .categorySection {
     padding-top: 70px;
     padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 660px;
+    margin: 0 auto;
 }
 
 .categories {

@@ -16,12 +16,9 @@ class Home extends Component {
 
         <h2 className="sectionHeaders">Categories</h2>
         <div className="categorySection">
-            <div className="columns categories">
+            <div className="columns is-multiline is-mobile categories">
               <Category categoryTitle="music" link="" categoryImage="./img/music.png" />
               <Category categoryTitle="national parks" link="" categoryImage="./img/parks.png" />
-            </div>
-
-            <div className="columns categories">
               <Category categoryTitle="farming" link="" categoryImage="./img/farming.png" />
               <Category categoryTitle="movies" link="" categoryImage="./img/movies.png" />
             </div>

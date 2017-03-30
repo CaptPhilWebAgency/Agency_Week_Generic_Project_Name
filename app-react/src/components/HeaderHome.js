@@ -25,7 +25,7 @@ class HeaderHome extends Component {
             {/*<!-- Add the modifier "is-active" to display it on mobile -->*/}
             <div className="nav-right nav-menu">
               <a className="nav-item">
-                search <span className="glyphicon glyphicon-search searchIcon" aria-hidden="true"></span>
+                search <i className="fa fa-search searchIcon" aria-hidden="true"></i>
               </a>
               <a className="nav-item">
                 products
@@ -34,7 +34,7 @@ class HeaderHome extends Component {
                 login
               </a>
               <a className="nav-item">
-                <span className="glyphicon glyphicon-shopping-cart cartIcon" aria-hidden="true"></span>
+                <i className="fa fa-shopping-cart cartIcon" aria-hidden="true"></i>
               </a>
             </div>
           </nav>

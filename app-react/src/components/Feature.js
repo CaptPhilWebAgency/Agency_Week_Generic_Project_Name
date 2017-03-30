@@ -6,12 +6,12 @@ class Feature extends Component {
       <div>
         
         <div className="columns featureCard">
-          <div className="column is-one-third-mobile is-offsett-one-third is-one-quarter-tablet is offset-one-quarter is-one-quarter-desktop is-offset-one-quarter is-gapless featureImgCol">
+          <div className="column is-one-third-mobile is-one-third-mobile-centered is-offset-one-quarter is-one-quarter-tablet is-gapless featureImgCol">
           {/*img src and alt will need to be replaced with state or props or whatever*/}
             <img src="./img/igp2.png" alt="photo of TITLE HERE" />
           </div>
           
-          <div className="featureContent column is-one-third-mobile is-one-quarter-tablet is-one-quarter-desktop is-half is-gapless">
+          <div className="featureContent column is-one-third-mobile is-one-third-mobile-centered is-one-quarter-tablet is-gapless">
            {/*h3, description, and price will need to be replaced with state or props or whatever*/}
             <h3 className="featureTitle">Led Zeppelin</h3>
             <p className="featureDescription">A classic Led Zeppelin patch, perfect for the gnarliest of Zep Heads.</p>
