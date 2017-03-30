@@ -1,0 +1,13 @@
+<h1>Iron Glory Order: <%= order.id %></h1>
+
+<p>
+  Thank you for your recent purchase. Your card has been charged: $<%= order.total %> dollars.
+</p>
+
+<p>
+  You can view the details of your order, as well as view its status by clicking here: <%= link_to "Order Status", root_url + "/orders/show" %>.
+</p>
+
+<p>Sincerely,</p>
+<p>The Staff</p>
+<p>Iron Glory</p>

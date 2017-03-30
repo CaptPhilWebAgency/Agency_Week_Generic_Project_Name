@@ -7,6 +7,8 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
+    OrdersMailer.create(@order).deliver
+    render json: @order
   end
 
   def show
