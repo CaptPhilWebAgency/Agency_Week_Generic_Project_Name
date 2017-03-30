@@ -59,6 +59,7 @@ if Product.all.count < 1
   movie.save!
 
 end
+<<<<<<< HEAD
 
 prod = Product.find(rand(1..Product.all.length))
 prod.featured = true
@@ -67,6 +68,11 @@ prod.save!
 
 
 
+=======
+prod = Product.find(rand(1..Product.all.length))
+prod.featured = true
+prod.save!
+>>>>>>> 8e36dfef63d3520f9588c4e5cffddbcff5216e60
 
 # This method adds 10 new users
 def new_users
