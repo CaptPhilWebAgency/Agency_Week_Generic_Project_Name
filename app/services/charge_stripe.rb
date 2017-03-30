@@ -4,12 +4,14 @@ class ChargeStripe
                 :amount,
                 :customer,
                 :result,
-                :token
+                :token,
+                :email
 
-  def initialize(user, amount, token = nil)
+  def initialize(user, amount, token = nil, email = nil)
     self.user = user if user
     self.amount = amount
     self.token = token if token
+    self.email = email if email
   end
 
   def charge_them
@@ -20,6 +22,7 @@ class ChargeStripe
 
   def create_customer
     self.customer = Stripe::Customer.create(
+      email: email
       source: token
     ).id
   end
@@ -27,10 +30,11 @@ class ChargeStripe
   def charge_customer
     begin
       Stripe::Charge.create(
-        customer: customer,
-        amount:      amount,
+        id:
         description: 'Iron Glory Purchase',
-        currency: 'usd'
+        currency: 'usd',
+        customer: customer,
+        amount: amount
       )
       self.result = {success: true}
     rescue Stripe::CardError => e
