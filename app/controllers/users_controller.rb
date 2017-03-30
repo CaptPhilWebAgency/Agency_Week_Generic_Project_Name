@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      UsersMailer.signup(@user).deliver
       render json: @user, serializer: UserExtendedSerializer
     else
       request_error(@user.errors.full_messages)
