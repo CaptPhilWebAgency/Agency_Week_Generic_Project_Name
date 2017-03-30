@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import HeaderHome from './HeaderHome';
 import Category from './Category';
 import Footer from './Footer';
-import Products from './Products';
+import Sign from './Sign';
 
-import { browserHistory } from 'react-router'
+// import { browserHistory } from 'react-router'
 
 
 // QQGABE: I left the links blank for you. I know that you'll have to change the stuff that's hard-coded like the categoryTitle and the categoryImage, but I wanted to have something there to work with for now.
@@ -27,6 +27,12 @@ class Home extends Component {
         <div>
           <Footer />
         </div>
+
+        <div>
+          <Sign />
+        </div>
+
+
       </div>
     );
   }
