@@ -1,5 +1,5 @@
 class OrderSerializer < ActiveModel::Serializer
-  attributes :id, :user, :cost, :status, :address, :created_at
+  attributes :id, :user, :total, :status, :address, :created_at
 
   def user
     object.user.id

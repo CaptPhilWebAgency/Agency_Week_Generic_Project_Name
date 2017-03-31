@@ -21,4 +21,8 @@ class ApplicationController < ActionController::Base
       request_error("You need to be logged in.", 401) unless current_user
   end
 
+  def current_cart
+    @cart = @cart || current_user.orders.where(status_id: 1) || current_user.orders.create(status_id: 1)
+  end
+
 end
