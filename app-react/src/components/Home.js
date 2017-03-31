@@ -10,11 +10,9 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.getCategories = this.getCategories.bind(this)
-    this.getProducts = this.getProducts.bind(this)
 
     this.state = {
-      categories: [],
-      products: []
+      categories: []
     }
   }
 
@@ -27,13 +25,6 @@ class Home extends Component {
       .then(response => response.json())
       .then(response => this.setState({categories: response}))
       // .then(response => console.log(response));
-  }
-
- getProducts() {
-    fetch('/api/products')
-      .then(response => response.json())
-      // .then(response => this.setState({products: response}))
-      .then(response => console.log(response));
   }
 
   render() {

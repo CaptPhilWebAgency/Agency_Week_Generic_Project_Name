@@ -34,7 +34,7 @@ class HeaderHome extends Component {
               <a className="nav-item">
                 login
               </a>
-              <a className="nav-item">
+              <a className="nav-item" onClick={() => browserHistory.push('/cart')}>
                 <i className="fa fa-shopping-cart cartIcon" aria-hidden="true"></i>
               </a>
             </div>
