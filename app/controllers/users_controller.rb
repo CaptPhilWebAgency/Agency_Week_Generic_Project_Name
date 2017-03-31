@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
 
   def index
-    @user = User.all
-    render json: @order
+    if current_user
+      @user = User.find(params[:id])
+      render json: @order
+    else
+      render json: @products
+    end
   end
 
   def show
