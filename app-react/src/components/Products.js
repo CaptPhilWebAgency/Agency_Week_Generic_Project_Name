@@ -48,32 +48,30 @@ class Products extends Component {
           // categories . . . no background images
       // hard code four or so products.
     return <div>
-        <HeaderSub />
-        <h2 className="sectionHeaders">Patches</h2>
-          <div className="productsSideMenu columns is-multiline is-mobile categories">
-            <div className="column is-one-quarter">
-              <div className="field has-addons">
-                <p className="control">
-                  <input className="input" type="text" placeholder="Search products"/>
-                </p>
-                <p className="control">
-                  <a className="button">
-                    Search
-                  </a>
-                </p>
-              </div>
-                <br/>
-                <h4>Sort By Category</h4>
-                {categories}
-            </div>
-            <div className="column">
-                <ProductBuild products={this.state.products} />
-            </div>
+      <HeaderSub />
+      <h2 className="sectionHeaders">Patches</h2>
+      <div className="productsSideMenu columns is-multiline is-mobile categories">
+        <div className="column is-one-quarter">
+          <div className="field has-addons">
+            <p className="control">
+              <input className="input" type="text" placeholder="Search products"/>
+            </p>
+            <p className="control">
+              <a className="button">
+                Search
+              </a>
+            </p>
           </div>
+            <br/>
+            <h4>Sort By Category</h4>
+            {categories}
         </div>
-
-          <Footer />
+        <div className="column">
+            <ProductBuild products={this.state.products} />
+        </div>
       </div>
+      <Footer />
+    </div>
   }
 };
 
