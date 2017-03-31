@@ -34,8 +34,8 @@ class HeaderSub extends Component {
                 login
               </a>
               <a className="nav-item">
-                <span className="glyphicon glyphicon-shopping-cart cartIcon" aria-hidden="true"
-                 onClick={() => browserHistory.push('/cart')}></span>
+                <i className="fa fa-shopping-cart cartIcon" aria-hidden="true"
+                 onClick={() => browserHistory.push('/cart')}></i>
               </a>
             </div>
           </nav>
