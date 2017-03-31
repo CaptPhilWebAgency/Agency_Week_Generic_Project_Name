@@ -62,12 +62,10 @@ class Products extends Component {
                   </a>
                 </p>
               </div>
-              <br/>
-              <h4>Sort By Category</h4>
-
-              {categories}
+                <br/>
+                <h4>Sort By Category</h4>
+                {categories}
             </div>
-
             <div className="column">
               <div className="columns is-multiline is-mobile categories">
                 <ProductBuild products={this.state.products} />
