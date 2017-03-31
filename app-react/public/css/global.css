@@ -20,8 +20,8 @@ body {
 .headerSub {
     background-image: url("../img/background.jpg");
     background-size: cover;
-    background-position: 0% 0%;
-    /*background-position: 0% 40%;*/
+    /*background-position: 0% 0%;*/
+    background-position: 0% 40%;
     /*QQGABE: I like position at 40%, too. . . it's in the sunnier part of the sky. But I see the value of the more consistent blue-gray, also. */
 }
 
@@ -194,6 +194,7 @@ footer a:hover {
 }
 
 /*start product Build*/
+
 .productImgBuild {
     border: 1px solid #BEBEBE;
     background-color: white;
@@ -211,6 +212,12 @@ footer a:hover {
     font-size: 15px; 
 }
 
+/*button.button.is-success.cartButton {*/
+    /*text-align: center;*/
+    /*background-color: #FD41A0;*/
+    /*display: inline-block;*/
+/*}*/
+
 
 /*start products*/
 input {
@@ -223,4 +230,10 @@ button {
 
 .categoryTitlesProductsPage {
     font-family: 'Raleway', sans-serif;
+    color: #FD41A0;
 }
+
+.productsSideMenu {
+    padding-left: 20px;
+}
+
