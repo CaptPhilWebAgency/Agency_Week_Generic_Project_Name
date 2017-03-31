@@ -16,7 +16,7 @@ class Product extends Component {
         </div>
       </div>
     })
-    return <div className="productsList">
+    return <div className="columns is-multiline is-mobile categories">
       {products}
     </div>
   }

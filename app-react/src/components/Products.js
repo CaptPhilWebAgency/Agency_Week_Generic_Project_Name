@@ -67,9 +67,7 @@ class Products extends Component {
                 {categories}
             </div>
             <div className="column">
-              <div className="columns is-multiline is-mobile categories">
                 <ProductBuild products={this.state.products} />
-              </div>
             </div>
           </div>
 
