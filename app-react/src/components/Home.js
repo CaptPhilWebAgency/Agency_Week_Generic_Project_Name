@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HeaderHome from './HeaderHome';
 import Category from './Category';
 import Footer from './Footer';
-import Sign from './Sign';
+// import Sign from './Sign';
 
 // import { browserHistory } from 'react-router'
 
@@ -27,11 +27,6 @@ class Home extends Component {
         <div>
           <Footer />
         </div>
-
-        <div>
-          <Sign />
-        </div>
-
 
       </div>
     );

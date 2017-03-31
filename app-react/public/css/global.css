@@ -58,7 +58,7 @@ a.nav-item {
 
 
 /*sectionHeaders -- pink titles with HR on either side*/
-.sectionHeaders {
+.sectionHeaders, .sectionHeadersSub {
     padding-top: 100px;
     text-transform: uppercase;
     font-size: 30px;
@@ -67,12 +67,12 @@ a.nav-item {
     color: #FD41A0;
 }
 
-.sectionHeaders {
+.sectionHeaders, .sectionHeadersSub {
     overflow: hidden;
     text-align: center;
 }
-.sectionHeaders:before,
-.sectionHeaders:after {
+.sectionHeaders:before, .sectionHeadersSub:before,
+.sectionHeaders:after, .sectionHeadersSub:after {
     background-color: #797979;
     content: "";
     display: inline-block;
@@ -81,11 +81,15 @@ a.nav-item {
     vertical-align: middle;
     width: 10%;
 }
-.sectionHeaders:before {
+.sectionHeaders:before, .sectionHeadersSub:before {
     right: 1.5em;
 }
-.sectionHeaders:after {
+.sectionHeaders:after, .sectionHeadersSub:after {
     left: 1.5em;
+}
+
+.sectionHeadersSub {
+    padding-bottom: 30px; 
 }
 /*end sectionHeaders*/
 
