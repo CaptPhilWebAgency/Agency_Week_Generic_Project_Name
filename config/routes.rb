@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :users
     resources :categories
 
+  
+    get  'products/categories/:id' => 'categories#show'
     post 'login' => 'users#login'
   end
 
