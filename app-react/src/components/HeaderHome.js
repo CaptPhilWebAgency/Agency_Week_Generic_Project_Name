@@ -9,7 +9,8 @@ class HeaderHome extends Component {
           <nav className="nav">
             <div className="nav-left">
               <a className="nav-item logo">
-                <img className="logoImage" src="./img/ironglorylogo.png" alt="Iron Glory logo"/>
+                <img className="logoImage" src="./img/ironglorylogo.png" alt="Iron Glory logo"
+                 onClick={() => browserHistory.push('/')}/>
               </a>
             </div>
 
