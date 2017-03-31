@@ -8,11 +8,11 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :convert=> 'png'
     process :tags => ['Iron_Glory']
 
-    version :product do
+    version :full do
       process :resize_to_fit => [1200, 1200, :north]
     end
 
-    version :category do
+    version :half do
       process :resize_to_fit => [1200, 600, :north]
     end
 
