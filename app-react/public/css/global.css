@@ -55,6 +55,7 @@ a.nav-item {
     font-weight: 700;
     color: #FD41A0;
 }
+
 .sectionHeaders, .sectionHeadersSub {
     overflow: hidden;
     text-align: center;
@@ -75,6 +76,7 @@ a.nav-item {
 .sectionHeaders:after, .sectionHeadersSub:after {
     left: 1.5em;
 }
+
 .sectionHeadersSub {
     padding-bottom: 30px; 
 }
@@ -163,6 +165,7 @@ footer a:hover {
     background-color: white;
 }
 /*start product Build*/
+
 .productImgBuild {
     border: 1px solid #BEBEBE;
     background-color: white;
@@ -177,11 +180,13 @@ footer a:hover {
     color: #545454;
     font-size: 15px; 
 }
+
 /*button.button.is-success.cartButton {*/
     /*text-align: center;*/
     /*background-color: #FD41A0;*/
     /*display: inline-block;*/
 /*}*/
+
 /*start products*/
 input {
     font-family: 'Raleway', sans-serif;
@@ -193,6 +198,8 @@ button {
     font-family: 'Raleway', sans-serif;
     color: #FD41A0;
 }
+
 .productsSideMenu {
     padding-left: 20px;
 }
+

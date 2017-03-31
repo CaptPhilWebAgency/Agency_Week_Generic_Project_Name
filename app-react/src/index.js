@@ -19,6 +19,7 @@ ReactDOM.render(
     <Route path="/" component={Home}/>
     <Route path="/products" component={Products} />
     <Route path="/cart" component={Cart} />
+
     <Route path="/login" component={Login} />
 </Router>,
 

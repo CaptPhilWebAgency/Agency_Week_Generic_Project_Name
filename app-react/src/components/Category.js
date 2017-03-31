@@ -10,6 +10,7 @@ class Category extends Component {
 
     // You can read incoming props, like categoryTitle="", using this.props.categoryTitle ...wrapping that in {} will output it to the productImage
     render() {
+
         let categories = this.props.category.map((category, key) => {
             return <div className="column is-half" key={key}>
                 <div className="section" style={{backgroundImage: 'url(' + category.image + ')'}}>
@@ -17,6 +18,7 @@ class Category extends Component {
                         <h3 className="categoryTitle">{category.name}</h3><br/>
                     </a>
                 </div>
+
             </div>
         })
         return <div className="columns is-multiline is-mobile categories">
