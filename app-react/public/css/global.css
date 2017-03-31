@@ -20,8 +20,8 @@ body {
 .headerSub {
     background-image: url("../img/background.jpg");
     background-size: cover;
-    /*background-position: 0% 0%;*/
-    background-position: 0% 40%;
+    background-position: 0% 0%;
+    /*background-position: 0% 40%;*/
     /*QQGABE: I like position at 40%, too. . . it's in the sunnier part of the sky. But I see the value of the more consistent blue-gray, also. */
 }
 

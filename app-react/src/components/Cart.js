@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import HeaderSub from './HeaderSub';
 import CartItem from './CartItem';
 import Footer from './Footer';
-
 class Cart extends Component {
   render() {
 
@@ -20,12 +19,10 @@ class Cart extends Component {
               <CartItem productImg="./img/igp23.png" productTitle="Yellowstone" productPrice="$24" selectedQuantity="1"/>
             </div>
           </div>
-
           <Footer />
       
       </div>
     );
   }
 }
-
 export default Cart;

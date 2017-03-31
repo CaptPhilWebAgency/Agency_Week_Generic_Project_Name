@@ -6,6 +6,7 @@ import ProductBuild from './ProductBuild';
 import Footer from './Footer';
 
 class Products extends Component {
+
   render() {
 
     return (
@@ -35,17 +36,16 @@ class Products extends Component {
               </div>
             
 
-            <div className="column">
-              <div className="columns is-multiline is-mobile categories">
-                <ProductBuild productImg="./img/igp20.png" productTitle="Rocky Mountain" productPrice="$134" />
-                <ProductBuild productImg="./img/igp21.png" productTitle="BANFF Canada" productPrice="$84" />
-                <ProductBuild productImg="./img/igp22.png" productTitle="Mt Rainier" productPrice="$42" />
-                <ProductBuild productImg="./img/igp23.png" productTitle="Yellowstone" productPrice="$24" />   
-              </div>
+              <div className="column">
+                <div className="columns is-multiline is-mobile categories">
+                  <ProductBuild productImg="./img/igp20.png" productTitle="Rocky Mountain" productPrice="$134" />
+                  <ProductBuild productImg="./img/igp21.png" productTitle="BANFF Canada" productPrice="$84" />
+                  <ProductBuild productImg="./img/igp22.png" productTitle="Mt Rainier" productPrice="$42" />
+                  <ProductBuild productImg="./img/igp23.png" productTitle="Yellowstone" productPrice="$24" />   
+                </div>
+            </div>
           </div>
-        </div>
-
-          <Footer />
+        <Footer />
       </div>
 
     )
