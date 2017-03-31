@@ -12,14 +12,14 @@ class Category extends Component {
     render() {
         let categories = this.props.category.map((category, key) => {
             return <div className="column is-half" key={key}>
-            <div className="section" style={{backgroundImage: 'url(' + category.image + ')'}}>
-                <a href="#" className="catLink">
-                    <h3 className="categoryTitle">{category.name}</h3><br/>
-                </a>
+                <div className="section" style={{backgroundImage: 'url(' + category.image + ')'}}>
+                    <a href="#" className="catLink">
+                        <h3 className="categoryTitle">{category.name}</h3><br/>
+                    </a>
+                </div>
             </div>
-        </div>
         })
-        return <div>
+        return <div className="columns is-multiline is-mobile categories">
             {categories}
         </div>
             

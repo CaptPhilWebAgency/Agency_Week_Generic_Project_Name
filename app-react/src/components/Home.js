@@ -34,7 +34,7 @@ class Home extends Component {
         <HeaderHome />
         <h2 className="sectionHeaders">Categories</h2>
         <div className="categorySection">
-            <div className="columns is-multiline is-mobile categories">
+            <div>
               <Category category={this.state.categories}/>
             </div>
         </div>

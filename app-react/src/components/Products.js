@@ -50,8 +50,8 @@ class Products extends Component {
     return <div>
         <HeaderSub />
         <h2 className="sectionHeaders">Patches</h2>
-          <div className="columns is-multiline is-mobile">
-            <div className="column is-one-third-mobile is-one-third-tablet is-one-quarter-desktop is-offset-1">
+          <div className="productsSideMenu columns is-multiline is-mobile categories">
+            <div className="column is-one-quarter">
               <div className="field has-addons">
                 <p className="control">
                   <input className="input" type="text" placeholder="Search products"/>
@@ -62,12 +62,16 @@ class Products extends Component {
                   </a>
                 </p>
               </div>
+              <br/>
+              <h4>Sort By Category</h4>
 
               {categories}
             </div>
 
-            <div className="productsList">
-              <ProductBuild products={this.state.products} />
+            <div className="column">
+              <div className="columns is-multiline is-mobile categories">
+                <ProductBuild products={this.state.products} />
+              </div>
             </div>
           </div>
 
