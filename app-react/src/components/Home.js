@@ -10,11 +10,9 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.getCategories = this.getCategories.bind(this)
-    this.getProducts = this.getProducts.bind(this)
 
     this.state = {
-      categories: [],
-      products: []
+      categories: []
     }
   }
 
@@ -29,13 +27,6 @@ class Home extends Component {
       // .then(response => console.log(response));
   }
 
- getProducts() {
-    fetch('/api/products')
-      .then(response => response.json())
-      // .then(response => this.setState({products: response}))
-      .then(response => console.log(response));
-  }
-
   render() {
 
     return (
@@ -43,7 +34,7 @@ class Home extends Component {
         <HeaderHome />
         <h2 className="sectionHeaders">Categories</h2>
         <div className="categorySection">
-            <div className="columns is-multiline is-mobile categories">
+            <div>
               <Category category={this.state.categories}/>
             </div>
         </div>
