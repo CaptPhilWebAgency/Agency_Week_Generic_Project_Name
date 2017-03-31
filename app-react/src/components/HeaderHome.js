@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Feature from './Feature';
+import { browserHistory } from 'react-router'
 
 class HeaderHome extends Component {
   render() {
@@ -27,13 +28,13 @@ class HeaderHome extends Component {
               <a className="nav-item">
                 search <i className="fa fa-search searchIcon" aria-hidden="true"></i>
               </a>
-              <a className="nav-item">
+              <a className="nav-item" onClick={() => browserHistory.push('/products')}>
                 products
               </a>
-              <a className="nav-item">
+              <a className="nav-item" onClick={() => browserHistory.push('/login')}>
                 login
               </a>
-              <a className="nav-item">
+              <a className="nav-item" onClick={() => browserHistory.push('/cart')}>
                 <i className="fa fa-shopping-cart cartIcon" aria-hidden="true"></i>
               </a>
             </div>
