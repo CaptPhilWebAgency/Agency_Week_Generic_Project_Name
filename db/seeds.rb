@@ -74,21 +74,39 @@ def new_users
     print '.'
     user = User.create!(
       email: Faker::Internet.unique.email,
-      password: "password"
+      password: "password",
+      first_name: Faker::Superhero.descriptor,
+      last_name: Faker::Superhero.suffix
     )
     users << user
   end
   users
 end
 
-# username: Faker::Pokemon.unique.name,
-# first_name: Faker::Superhero.descriptor,
-# last_name: Faker::Superhero.suffix,
+def new_addresses(users)
+  print "\nadding addresses..."
+  users.each do |u|
+    if u.addresses.empty?
+      print "."
+      u.addresses.create!(
+        name: "#{u.first_name} #{u.last_name}",
+        street: Faker::Address.street_address,
+        city: Faker::Address.city,
+        state: Faker::Address.state_abbr,
+        zip: Faker::Address.zip
+      )
+
+    end
+  end
+end
+
+
 
 
 
 #run the methods here.
 # this runs new_users if there are less than 10 users in the database.
-# userslist = User.all.length < 5 ? new_users : User.all
+userslist = User.all.length < 5 ? new_users : User.all
+new_addresses(userslist)
 
 puts "\nDone."

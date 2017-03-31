@@ -4,6 +4,10 @@ import React, { Component } from 'react';
 import HeaderSub from './HeaderSub';
 import CartItem from './CartItem';
 import Footer from './Footer';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 14e9d8f507fca76c0fa54d60f14d167e9864a22e
 class Cart extends Component {
   render() {
 
@@ -19,6 +23,10 @@ class Cart extends Component {
               <CartItem productImg="./img/igp23.png" productTitle="Yellowstone" productPrice="$24" selectedQuantity="1"/>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 14e9d8f507fca76c0fa54d60f14d167e9864a22e
           <Footer />
       
       </div>

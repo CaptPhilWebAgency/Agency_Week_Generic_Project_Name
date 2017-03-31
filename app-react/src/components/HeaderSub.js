@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router'
 
 class HeaderSub extends Component {
   render() {
@@ -6,7 +7,8 @@ class HeaderSub extends Component {
           <nav className="nav">
             <div className="nav-left">
               <a className="nav-item logo">
-                <img className="logoImage" src="./img/ironglorylogo.png" alt="Iron Glory logo"/>
+                <img className="logoImage" src="./img/ironglorylogo.png" alt="Iron Glory logo"
+                onClick={() => browserHistory.push('/')}/>
               </a>
             </div>
 
@@ -25,14 +27,15 @@ class HeaderSub extends Component {
               <a className="nav-item">
                 search <i className="fa fa-search searchIcon" aria-hidden="true"></i>
               </a>
-              <a className="nav-item">
+              <a className="nav-item" onClick={() => browserHistory.push('/products')}>
                 products
               </a>
-              <a className="nav-item">
+              <a className="nav-item" onClick={() => browserHistory.push('/login')}>
                 login
               </a>
               <a className="nav-item">
-                <i className="fa fa-shopping-cart cartIcon" aria-hidden="true"></i>
+                <i className="fa fa-shopping-cart cartIcon" aria-hidden="true"
+                 onClick={() => browserHistory.push('/cart')}></i>
               </a>
             </div>
           </nav>
