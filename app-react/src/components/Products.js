@@ -70,6 +70,7 @@ class Products extends Component {
                 <ProductBuild products={this.state.products} />
             </div>
           </div>
+        </div>
 
           <Footer />
       </div>

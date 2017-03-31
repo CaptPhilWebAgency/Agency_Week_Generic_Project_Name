@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import HeaderHome from './HeaderHome';
 import Category from './Category';
 import Footer from './Footer';
+
 // import Products from './Products';
 // import { browserHistory } from 'react-router'
 
 class Home extends Component {
+
 
   constructor(props) {
     super(props)
@@ -41,6 +43,7 @@ class Home extends Component {
         <div>
           <Footer />
         </div>
+
       </div>
     );
   }

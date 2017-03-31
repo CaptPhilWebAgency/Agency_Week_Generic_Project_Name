@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 // import { browserHistory } from 'react-router'
+
 import HeaderSub from './HeaderSub';
 import CartItem from './CartItem';
 import Footer from './Footer';
+
 class Cart extends Component {
   render() {
+
     return (
       <div>
         <HeaderSub />
@@ -17,6 +20,7 @@ class Cart extends Component {
               <CartItem productImg="./img/igp23.png" productTitle="Yellowstone" productPrice="$24" selectedQuantity="1"/>
             </div>
           </div>
+
           <Footer />
       
       </div>

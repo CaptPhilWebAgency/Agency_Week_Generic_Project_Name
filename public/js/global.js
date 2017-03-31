@@ -1,7 +1,11 @@
 // homepage
 
-// getProducts();
 
+console.log('sup');
+
+getProducts();
+
+// getProducts();
 // getCategories()
 
 // displayFilteredCat()
@@ -48,4 +52,3 @@
 //             // console.log(getCat.name)
 //         });
 // }
-

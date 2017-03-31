@@ -17,10 +17,10 @@ class HeaderHome extends Component {
             {/*This "nav-toggle" hamburger menu is only visible on mobile -->*/}
             {/*<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->*/}
             <span className="nav-toggle">
-              <span> {/*search <span className="glyphicon glyphicon-search searchIcon" aria-hidden="true"></span>*/}</span>
+              <span> {/*search <i className="fa fa-search searchIcon searchIcon" aria-hidden="true"></i>*/}</span>
               <span> {/*products*/}</span>
               <span> {/*login*/}</span>
-              <span> {/*<span className="glyphicon glyphicon-shopping-cart cartIcon" aria-hidden="true"></span>*/}</span>
+              <span> {/*<i className="fa fa-shopping-cart cartIcon" aria-hidden="true"></i>*/}</span>
             </span>
 
             {/*<!-- This "nav-menu" is hidden on mobile -->*/}
