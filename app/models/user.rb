@@ -5,6 +5,6 @@ class User < ApplicationRecord
   has_many :orders
   has_many :addresses
 
-  validates :email, presence: true, uniqueness: true
-  
+  validates :email,:first_name, :last_name, presence: true, uniqueness: true
+
 end

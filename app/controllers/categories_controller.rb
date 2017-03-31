@@ -2,7 +2,11 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
-    render json: @categories.map { |c| {name: c.name, image: c.image.url}  }
+
+    render json: @categories.map { |c|
+      {name: c.name, image: c.image.url} }
+
+
   end
 
   def show

@@ -2,28 +2,51 @@ import React, { Component } from 'react';
 import HeaderHome from './HeaderHome';
 import Category from './Category';
 import Footer from './Footer';
-import Products from './Products';
+// import Products from './Products';
+// import { browserHistory } from 'react-router'
 
-import { browserHistory } from 'react-router'
-
-
-// QQGABE: I left the links blank for you. I know that you'll have to change the stuff that's hard-coded like the categoryTitle and the categoryImage, but I wanted to have something there to work with for now.
 class Home extends Component {
+
+  constructor(props) {
+    super(props)
+    this.getCategories = this.getCategories.bind(this)
+    this.getProducts = this.getProducts.bind(this)
+
+    this.state = {
+      categories: [],
+      products: []
+    }
+  }
+
+   componentWillMount() {
+   this.getCategories()
+ }
+
+  getCategories() {
+  fetch('/api/categories')
+      .then(response => response.json())
+      .then(response => this.setState({categories: response}))
+      // .then(response => console.log(response));
+  }
+
+ getProducts() {
+    fetch('/api/products')
+      .then(response => response.json())
+      // .then(response => this.setState({products: response}))
+      .then(response => console.log(response));
+  }
+
   render() {
+
     return (
       <div>
         <HeaderHome />
-
         <h2 className="sectionHeaders">Categories</h2>
         <div className="categorySection">
             <div className="columns is-multiline is-mobile categories">
-              <Category categoryTitle="music" link="" categoryImage="./img/music.png" />
-              <Category categoryTitle="national parks" link="" categoryImage="./img/parks.png" />
-              <Category categoryTitle="farming" link="" categoryImage="./img/farming.png" />
-              <Category categoryTitle="movies" link="" categoryImage="./img/movies.png" />
+              <Category category={this.state.categories}/>
             </div>
         </div>
-
         <div>
           <Footer />
         </div>
