@@ -8,7 +8,7 @@ class Feature extends Component {
         <div className="columns featureCard">
           <div className="column is-one-third-mobile is-one-third-mobile-centered is-offset-one-quarter is-one-quarter-tablet is-gapless featureImgCol">
           {/*img src and alt will need to be replaced with state or props or whatever*/}
-            <img src="./img/igp2.png" alt="photo of TITLE HERE" />
+            <img src="./img/igp2.png" alt="TITLE HERE" />
           </div>
           
           <div className="featureContent column is-one-third-mobile is-one-third-mobile-centered is-one-quarter-tablet is-gapless">
