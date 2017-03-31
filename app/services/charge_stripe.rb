@@ -1,49 +1,46 @@
 class ChargeStripe
 
-  attr_accessor :user,
-                :amount,
-                :customer,
-                :result,
-                :token,
-                :email
+   attr_accessor :user,
+                 :amount,
+                 :result,
+                 :customer,
+                 :token
 
-  def initialize(user, amount, token = nil, email = nil)
-    self.user = user if user
-    self.amount = amount
-    self.token = token if token
-    self.email = email if email
-  end
+   def initialize(user, token, amount)
+     self.user = user
+     self.token = token
+     self.amount = amount
+   end
 
-  def charge_them
-    self.customer = user.customer_id ? user.customer_id : create_customer # unless user.customer_id
-    charge_customer
-    output_result
-  end
+   def charge_them
+     create_customer # unless user.customer_id
+     charge_customer
+     output_result
+   end
 
-  def create_customer
-    self.customer = Stripe::Customer.create(
-      email: email
-      source: token
-    ).id
-  end
+   def create_customer
+     self.customer = Stripe::Customer.create(
+       :email => user.email,
+       :source  => token
+     )
+   end
 
-  def charge_customer
-    begin
-      Stripe::Charge.create(
-        id:
-        description: 'Iron Glory Purchase',
-        currency: 'usd',
-        customer: customer,
-        amount: amount
-      )
-      self.result = {success: true}
-    rescue Stripe::CardError => e
-      self.result = {error: e.message}
-    end
-  end
+   def charge_customer
+     begin
+       Stripe::Charge.create(
+         :customer    => customer.id,
+         :amount      => amount,
+         :description => 'Notemeister cover charge',
+         :currency    => 'usd'
+       )
+       self.result = {success: true}
+     rescue Stripe::CardError => e
+       self.result = {error: e.message}
+     end
+   end
 
-  def output_result
-    result
-  end
+   def output_result
+     result
+   end
 
-end
+ end
