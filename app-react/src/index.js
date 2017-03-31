@@ -11,6 +11,7 @@ import Home from './components/Home';
 import Products from './components/Products';
 // import ProductSelected from './components/ProductSelected';
 import Cart from './components/Cart';
+import Login from './components/Login';
 // import Success from './components/Success';
 
 ReactDOM.render(
@@ -18,7 +19,7 @@ ReactDOM.render(
     <Route path="/" component={Home}/>
     <Route path="/products" component={Products} />
     <Route path="/cart" component={Cart} />
-
+    <Route path="/login" component={Login} />
 </Router>,
 
   document.getElementById('root')

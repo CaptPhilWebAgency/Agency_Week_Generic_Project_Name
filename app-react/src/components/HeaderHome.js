@@ -31,7 +31,7 @@ class HeaderHome extends Component {
               <a className="nav-item" onClick={() => browserHistory.push('/products')}>
                 products
               </a>
-              <a className="nav-item">
+              <a className="nav-item" onClick={() => browserHistory.push('/login')}>
                 login
               </a>
               <a className="nav-item" onClick={() => browserHistory.push('/cart')}>
