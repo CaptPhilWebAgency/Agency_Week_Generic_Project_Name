@@ -12,7 +12,7 @@ class Category extends Component {
     render() {
         let categories = this.props.category.map((category, key) => {
             return <div className="column is-half" key={key}>
-            <div className="section" style={{backgroundImage: 'url(' + category.image.url + ')'}}>
+            <div className="section" style={{backgroundImage: 'url(' + category.image + ')'}}>
                 <a href="#" className="catLink">
                     <h3 className="categoryTitle">{category.name}</h3><br/>
                 </a>
@@ -22,6 +22,7 @@ class Category extends Component {
         return <div>
             {categories}
         </div>
+            
     }
 }
 

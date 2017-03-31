@@ -8,14 +8,16 @@ import { Router, Route, browserHistory/*, IndexRoute*/ } from 'react-router';
 import Home from './components/Home';
 // import Sign from './components/Sign';
 // import ProductBuild from './components/ProductBuild';
-// import Products from './components/Products';
+import Products from './components/Products';
 // import ProductSelected from './components/ProductSelected';
-// import Cart from './components/Cart';
+import Cart from './components/Cart';
 // import Success from './components/Success';
 
 ReactDOM.render(
 <Router history={browserHistory}>
     <Route path="/" component={Home}/>
+    <Route path="/products" component={Products} />
+    <Route path="/cart" component={Cart} />
 
 </Router>,
 
@@ -25,6 +27,5 @@ ReactDOM.render(
 
 /*    <Route path="/sign" component={Sign} />
     <Route path="/productbuild" component={ProductBuild} />
-    <Route path="/products" component={Products} />
     <Route path="/productselected" component={ProductSelected} />
-    <Route path="/cart" component={Cart} /> */
+     */

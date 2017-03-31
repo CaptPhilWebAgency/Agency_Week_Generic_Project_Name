@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router'
+// import { browserHistory } from 'react-router'
 
 import HeaderSub from './HeaderSub';
 import ProductBuild from './ProductBuild';
 import Footer from './Footer';
 
 class Products extends Component {
+
   render() {
           // categories . . . no background images
       // hard code four or so products.

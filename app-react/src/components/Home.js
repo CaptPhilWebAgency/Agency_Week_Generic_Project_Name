@@ -20,22 +20,21 @@ class Home extends Component {
 
    componentWillMount() {
    this.getCategories()
-   this.getProducts()
  }
 
   getCategories() {
   fetch('/api/categories')
       .then(response => response.json())
-      // .then(response => this.setState({categories: response}))
-      .then(response => console.log(response));
- }
+      .then(response => this.setState({categories: response}))
+      // .then(response => console.log(response));
+  }
 
  getProducts() {
     fetch('/api/products')
       .then(response => response.json())
       // .then(response => this.setState({products: response}))
       .then(response => console.log(response));
- }
+  }
 
   render() {
 
